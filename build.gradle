@@ -20,8 +20,17 @@ repositories {
 
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-webmvc'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    runtimeOnly 'org.xerial:sqlite-jdbc'
+    implementation 'org.hibernate.orm:hibernate-community-dialects'
+    // runtimeOnly 'com.mysql:mysql-connector-j'
+    // runtimeOnly 'org.postgresql:postgresql'
+    // Development - automatic restart when code changes
+    developmentOnly 'org.springframework.boot:spring-boot-devtools'
+
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
+
     testImplementation 'org.springframework.boot:spring-boot-starter-webmvc-test'
     testCompileOnly 'org.projectlombok:lombok'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
